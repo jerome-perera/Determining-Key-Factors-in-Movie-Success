@@ -3,7 +3,7 @@
 By: Simon Mei, Walter Disharoon, Jerome Perera, Ankith Kanderi, and Himnish Kapoor
 
 Project Proposal Recording:
-
+[Youtube Link](https://youtu.be/j-8RxawvbOY)
 ### **Introduction:**  
 
 Currently, the primary goal of movies is to maximize profit for the studios and companies who create them. In order to achieve this goal, movie studios want to use machine learning to maximize box office revenue.   
