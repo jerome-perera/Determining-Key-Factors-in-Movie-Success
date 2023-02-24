@@ -1,6 +1,10 @@
 # **Determining Key Factors in Movie Success**
 
-#### **Introduction:**  
+By: Simon Mei, Walter Disharoon, Jerome Perera, Ankith Kanderi, and Himnish Kapoor
+
+Project Proposal Recording:
+
+### **Introduction:**  
 
 Currently, the primary goal of movies is to maximize profit for the studios and companies who create them. In order to achieve this goal, movie studios want to use machine learning to maximize box office revenue.   
 
@@ -8,11 +12,11 @@ Nowadays, Hollywood has already become familiar with machine learning and there 
 
 Our proposed dataset is The Movies Dataset from Kaggle by Rounak Banik3. This dataset contains metadata for 45,000 movies. Some of the important features of this dataset include things such as casting crew, directors, advertising budget, and, most importantly to our project, revenue. 
 
-#### **Problem Definition:**  
+### **Problem Definition:**  
 
 The goal of this project is to use both supervised and unsupervised learning to determine the various elements, and their corresponding importance, that contribute to a monetarily successful movie. More specifically, the findings of this project should give movie studios a better understanding of factors to consider when creating movies. This is different from the many other movie-related models out there that simply state whether a movie is expected to be successful or not, because the findings of this project are more about providing the movie industry with information for future decisions.  
 
-#### **Methods:** 
+### **Methods:** 
 
 #### **Both:** 
 
@@ -26,7 +30,7 @@ For supervised learning the methods utilized is planned to be ensemble learning.
 
 Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance4 could be useful to deal with both the categorical and numerical data present. 
 
-#### **Potential Results and Discussion:** 
+### **Potential Results and Discussion:** 
 
 #### **Supervised Learning:** 
 
