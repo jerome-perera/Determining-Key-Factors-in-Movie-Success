@@ -1,4 +1,4 @@
-# **Determining Key Factors in Movie Success**
+
 
 By: Simon Mei, Walter Disharoon, Jerome Perera, Ankith Kanderi, and Himnish Kapoor
 
