@@ -4,7 +4,7 @@ By: Simon Mei, Walter Disharoon, Jerome Perera, Ankith Kanderi, and Himnish Kapo
 
 Project Proposal Recording:
 
-[download this](files/GanttChart.xlsx.zip)
+[Gantt Chart](GanttChart.zip)
 
 ### **Introduction:**  
 
