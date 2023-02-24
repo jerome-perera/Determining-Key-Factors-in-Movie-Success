@@ -43,7 +43,9 @@ Unsupervised learning can be evaluated using standard clustering metrics such as
 ### **Timeline:**
 
 [Gantt Chart](GanttChart.zip)
+
 ![Gantt Chart](Gantt Chart_Test_image.png)
+
 #### **Contribution Table:**
 
 Walter | Ankith | Simon | Jerome | Himnish
