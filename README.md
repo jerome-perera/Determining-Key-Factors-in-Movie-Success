@@ -50,7 +50,7 @@ Unsupervised learning can be evaluated using standard clustering metrics such as
 
 Walter | Ankith | Simon | Jerome | Himnish
 --- | --- | --- | --- |---
-Methods, Potential Results, Video Clips | Introduction, Problem Definition, Video Clips | Dataset, References | Video Creation, GitHub Page | Video Creation, GitHub Page
+Methods, Potential Results, Video Clips | Introduction, Problem Definition, Video Clips | Dataset, References | Video Creation, GitHub Page | Video Creation, GitHub Pag
 
 #### **References:**
 
