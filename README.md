@@ -54,6 +54,7 @@ Afterwards before any modeling or training takes place we encode the features in
 
 Bar charts for the genres, cast and crew sizes, directors, budgets, and runtime are shown below.
 
+![Genres](Genres_Bar.png)
 
 
 #### **Both:** 
