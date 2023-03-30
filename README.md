@@ -64,27 +64,27 @@ Bar charts for the genres, cast and crew sizes, directors, budgets, and runtime 
 
 ![CastHisto](Cast_Histogram.png)
 
-We did notice a large portion of the cast members having very few movies, so we culled the cast members with less than 20 movies, and similarly with production companies with less than 10 movies as they would not be useful for training or testing with very little entries. Finally at this point we filled any NaN entries with the average value for runtime, and one hot encoded the cast, genres, and production companies.
+We did notice a large portion of the cast members having very few movies, so we culled the cast members with less than 20 movies, and similarly with production companies with less than 10 movies as they would not be useful for training or testing with very little entries. At this point we filled any NaN entries with the average value for runtime, and one hot encoded the cast, genres, and production companies. Finally, looking at the profit output, we can see that about 70% of the movies are profitable, while 30% are not profitable, which results in an unbalanced dataset if addressed with a binary classifier.
 
-#### **Both:** 
+#### **Both:** :exclamation::exclamation:
 
 Both supervised and unsupervised learning will require cleaning the dataset and performing feature engineering to decide how to use the individual features. This stage will include visualizations and statistical analysis to decide on worthwhile features towards predicting movie financial success. 
 
-#### **Supervised Learning:** 
+#### **Supervised Learning:** :exclamation::exclamation:
 
 For supervised learning the methods utilized is planned to be ensemble learning. Ensemble learning will encompass implementing multiple different methods of solving the regression problem and utilizing the different regression methods to decide on an output. Utilizing ensemble methods, like stacking, will allow for easy comparison between individual methods, and if combining those methods leads to a better solution in terms of modeling the success of the movie. 
 
-##### **Unsupervised Learning:** 
+##### **Unsupervised Learning:** :exclamation::exclamation:
 
 Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance[^4] could be useful to deal with both the categorical and numerical data present. 
 
-### **Potential Results and Discussion:** 
+### **Potential Results and Discussion:** :exclamation::exclamation:
 
-#### **Supervised Learning:** 
+#### **Supervised Learning:** :exclamation::exclamation:
 
 Evaluating supervised learning for monetary success can be simply done by looking at the mean squared error between the actual performance and the expected performance in the testing set. By comparing the ensemble method and the individual methods making up the ensemble, we can decide on the best method and evaluate the success of various methods on the problem. 
 
-#### **Unsupervised Learning:** 
+#### **Unsupervised Learning:** :exclamation::exclamation:
 
 Unsupervised learning can be evaluated using standard clustering metrics such as silhouette coefficient or the Davies-Bouldin index. For anomaly detection evaluation will be more qualitative and focused on improved visualization and results. 
 
@@ -94,11 +94,11 @@ Unsupervised learning can be evaluated using standard clustering metrics such as
 
 ![Gantt Chart](Gantt Chart_Test_image.png)
 
-#### **Contribution Table:**
+#### **Midterm Contribution Table:** :exclamation::exclamation:
 
 Walter | Ankith | Simon | Jerome | Himnish
 --- | --- | --- | --- |---
-Methods, Potential Results, Video Clips | Introduction, Problem Definition, Video Clips | Dataset, References | Video Creation, GitHub Page | Video Creation, GitHub Pages
+Data import and cleaning, feature engineering, Github Page, Help with Naive Bayes | Forward Feature Selection, Github Page | Categorical and One-hot-encoding, Naive Bayes implementation | Forward Feature Selection  | Categorical and One-hot-encoding, Naive Bayes implementation
 
 #### **References:**
 
