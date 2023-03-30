@@ -18,6 +18,44 @@ The goal of this project is to use both supervised and unsupervised learning to 
 
 ### **Methods:** 
 
+#### **Data Collection, Cleaning, and Visualization**
+The movies dataset contains metadata for over 45,000 movies. Unfortunately though the dataset is provided in multiple separate csv's in a somewhat unwieldy state. The data collection and cleaning process was as follows:
+
+1. import the csv's as pandas dataframes
+2. remove entries from the csv's with duplicate movie IDs
+3. Drop non-sensical features for prediction such as: alternative id, homepage, poster_path, status, tagline, etc.
+4. Replace missing/empty features with NaN. This will make later training easier
+
+Once this step is complete, many of the features that could be useful are saved in a JSON format that is not useful for training. So we:
+
+5. Since we are trying to predict movie profitability we would want to cull features that come after the release of the movie such as voting averages and vote count; and features that are uncontrollable like "release year".
+6. Extract and interpret the JSON's in the credits.csv into new features such as "Director", "Cast List", "Crew Size", "Cast Size".
+7. Extract the month published from the dates column
+8. Extract the output "Profit" as "Revenue" - "Budget".
+
+Unfortunately only 5371 entries out of the initial 45000 have data for revenue and budget to extract profit, which does severly lower the dataset size. After acquiring this initial cleaned dataset the features present are:
+
+1. Budget
+2. Production Countries
+3. Runtime
+4. Spoken Languages
+5. Cast and Crew sizes
+6. Director
+7. Release Month
+8. List of Cast
+9. List of Production Companies
+10. Genres
+
+Afterwards before any modeling or training takes place we encode the features in the following way:
+
+1. Budget, Runtime, and Cast size, and Crew Size are encoded as real numbers
+2. Production Countries, Spoken Languages, Release Month, and Directors are encoded categorically
+3. Cast, Genres, and Production Companies are one-hot-encoded since they have multiple entries inside
+
+Bar charts for the genres, cast and crew sizes, directors, budgets, and runtime are shown below.
+
+
+
 #### **Both:** 
 
 Both supervised and unsupervised learning will require cleaning the dataset and performing feature engineering to decide how to use the individual features. This stage will include visualizations and statistical analysis to decide on worthwhile features towards predicting movie financial success. 
