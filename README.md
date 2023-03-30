@@ -57,6 +57,9 @@ Bar charts for the genres, cast and crew sizes, directors, budgets, and runtime 
 ![Genres](Genres_Bar.png)
 
 ![Month](Month_Bar.png)
+
+![Directors](Top30_Directors.png)
+![Histogram](Directors Histogram.png)
 #### **Both:** 
 
 Both supervised and unsupervised learning will require cleaning the dataset and performing feature engineering to decide how to use the individual features. This stage will include visualizations and statistical analysis to decide on worthwhile features towards predicting movie financial success. 
