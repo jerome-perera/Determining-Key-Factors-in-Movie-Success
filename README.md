@@ -72,19 +72,39 @@ We did notice a large portion of the cast members having very few movies, so we 
 
 Both supervised and unsupervised learning will require cleaning the dataset and performing feature engineering to decide how to use the individual features. This stage will include visualizations and statistical analysis to decide on worthwhile features towards predicting movie financial success. 
 
-#### **Supervised Learning:** :exclamation::exclamation:
+#### **Supervised Learning: OLD** :exclamation::exclamation:
 
 For supervised learning the methods utilized is planned to be ensemble learning. Ensemble learning will encompass implementing multiple different methods of solving the regression problem and utilizing the different regression methods to decide on an output. Utilizing ensemble methods, like stacking, will allow for easy comparison between individual methods, and if combining those methods leads to a better solution in terms of modeling the success of the movie. 
+
+#### **Supervised Learning: NEW**:
+For supervised learning the first model we implemented was Naive Bayes (NB). By using NB has the benefit of relatively easily handling mixed input features. By combining the probabilistic output of a Bernoulli NB for one hot encoded features, Categorical NB for categorical features, and Gaussian NB for continuous features, it is possible to fit a model with these three feature types. The models are initially trained with the selected features and the likelihood from each is then combined as in the equation below.
+
+$$ P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)}{\sum_y P(x_{cat}|y)+P(x_{bern}|y)+P(x_{cont}|y)} $$
+
+These are extracted using the predict_proba() function in each sk-learn NB implementation.
 
 ##### **Unsupervised Learning:** :exclamation::exclamation:
 
 Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance[^4] could be useful to deal with both the categorical and numerical data present. 
 
-### **Potential Results and Discussion:** :exclamation::exclamation:
+### **Results and Discussion:** :exclamation::exclamation:
 
-#### **Supervised Learning:** :exclamation::exclamation:
+#### **Supervised Learning: OLD** :exclamation::exclamation:
 
 Evaluating supervised learning for monetary success can be simply done by looking at the mean squared error between the actual performance and the expected performance in the testing set. By comparing the ensemble method and the individual methods making up the ensemble, we can decide on the best method and evaluate the success of various methods on the problem. 
+
+#### **Supervised Learning: New** :exclamation::exclamation:
+
+Simply fitting naive bayes with all the features with no feature selection results can be seen in the table below.
+
+Type | Accuracy | Precision | Recall
+--- | --- | --- | ---
+Train | 0.8137 | 0.954 | 0.8121
+Test | 0.706 | 0.888 | 0.7422
+Test only Categorical | | | 0.711
+Test only Bernoulli | | | 0.730
+Test only Gaussian | | | 0.591
+"1" | 0.6988 | 1.0 | 0.6988 
 
 #### **Unsupervised Learning:** :exclamation::exclamation:
 
