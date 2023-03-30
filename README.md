@@ -62,6 +62,10 @@ Bar charts for the genres, cast and crew sizes, directors, budgets, and runtime 
 
 ![Histogram](Director_Histogram.png)
 
+![CastHisto](Cast_Histogram.png)
+
+We did notice a large portion of the cast members having very few movies, so we culled the cast members with less than 20 movies, and similarly with production companies with less than 10 movies as they would not be useful for training or testing with very little entries. Finally at this point we filled any NaN entries with the average value for runtime, and one hot encoded the cast, genres, and production companies.
+
 #### **Both:** 
 
 Both supervised and unsupervised learning will require cleaning the dataset and performing feature engineering to decide how to use the individual features. This stage will include visualizations and statistical analysis to decide on worthwhile features towards predicting movie financial success. 
