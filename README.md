@@ -60,7 +60,7 @@ Bar charts for the genres, cast and crew sizes, directors, budgets, and runtime 
 
 ![Directors](Top30_Directors.png)
 
-![Histogram](Directors Histogram.png)
+![Histogram](Director_Histogram.png)
 
 #### **Both:** 
 
