@@ -102,7 +102,7 @@ Type | Accuracy | Precision | Recall
 Train | 0.8137 | 0.954 | 0.8121
 Test | 0.706 | 0.888 | 0.7422
 Test only Categorical | 0.711 | | 
-Test only Bernoulli | 0.730 | | 
+Test only Bernoulli | 0.672 | | 
 Test only Gaussian | 0.591 | | 
 "1" | 0.6988 | 1.0 | 0.6988 
 
