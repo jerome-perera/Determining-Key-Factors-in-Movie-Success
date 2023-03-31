@@ -52,7 +52,7 @@ Afterwards before any modeling or training takes place we encode the features in
 2. Production Countries, Spoken Languages, Release Month, and Directors are encoded categorically
 3. Cast, Genres, and Production Companies are one-hot-encoded since they have multiple entries inside
 
-Bar charts for the genres, cast and crew sizes, directors, budgets, and runtime are shown below.
+Bar charts and histograms for the genres, cast and directors, budgets, and runtime are shown below.
 
 ![Genres](Genres_Bar.png)
 
