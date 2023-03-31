@@ -83,6 +83,8 @@ $$ P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}{\sum_y P(x_{cat}|y
 
 These are extracted using the predict_proba() function in each sk-learn NB implementation.
 
+Next steps would include trying further models such as ensemble learning, deep learning, Random Forest, and other methods. This could include applying regression instead of binary classification on the profit data to investigate if regression is more successful than binary classification for predicting profitability.
+
 ##### **Unsupervised Learning:** :exclamation::exclamation:
 
 Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance[^4] could be useful to deal with both the categorical and numerical data present. 
@@ -108,8 +110,6 @@ Test only Gaussian | 0.591 | |
 LR Train | 0.761 | 0.8519 | 0.761
 LR Test | 0.736 | 0.8706 | 0.736
 
-:exclamation::exclamation: **talk about results after feature selection**
-
 Feature selection was done with forward feature selection on the individual models (Categorical, Bernoulli, and Gaussian) to identify the best parameters for each model. The comparison after feature selection is shown below.
 
 Type (Post FS) | Accuracy | Precision | Recall
@@ -128,9 +128,11 @@ The important parameters for the types of data found by forward feature selectio
 2. Categorical - "production_country"
 3. Bernoulli - "BBC Films", "Canal+", "Castle Rock Entertainment", "Epsilon Motion Pictures", "France 2 Cinema", "Malpaso Productions", "Millenium Films", "Morgan Creek Productions", "Regency Enterprises", "Studio Babelsberg", "Action", "Arnold Schwarzenegger", "Dustin Hoffman", "Tom Cruise", "Willem Dafoe"
 
+When implementing other models for the final project, evaluation will be done similarly for the binary case, and mean squared error will likely be used for the regression cases.
+
 #### **Unsupervised Learning:** :exclamation::exclamation:
 
-Unsupervised learning can be evaluated using standard clustering metrics such as silhouette coefficient or the Davies-Bouldin index. For anomaly detection evaluation will be more qualitative and focused on improved visualization and results. 
+Unsupervised learning will be evaluated using standard clustering metrics such as silhouette coefficient or the Davies-Bouldin index. For anomaly detection evaluation will be more qualitative and focused on improved visualization and results. 
 
 ### **Timeline:**
 
