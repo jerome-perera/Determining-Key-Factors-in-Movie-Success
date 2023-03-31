@@ -77,9 +77,7 @@ For supervised learning the first model we implemented, to see if learning is po
 
 ![Equation](equation.png)
 
-These are extracted using the predict_proba() function in each sk-learn NB implementation.
-
-Next steps would include trying further models such as ensemble learning, deep learning, Random Forest, and other methods. This could include applying regression instead of binary classification on the profit data to investigate if regression is more successful than binary classification for predicting profitability.
+These are extracted using the predict_proba() function in each sk-learn NB implementation. Next steps would include trying further models such as ensemble learning, deep learning, Random Forest, and other methods. This could include applying regression instead of binary classification on the profit data to investigate if regression is more successful than binary classification for predicting profitability.
 
 ##### **Unsupervised Learning:** 
 
