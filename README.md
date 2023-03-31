@@ -95,7 +95,7 @@ Evaluating supervised learning for monetary success can be simply done by lookin
 
 #### **Supervised Learning: New** :exclamation::exclamation:
 
-Simply fitting naive bayes with all the features with no feature selection results can be seen in the table below. The training set was 90% of the data and the test set was 10%.
+Simply fitting naive bayes with all the features with no feature selection results can be seen in the table below. The training set was 90% of the data and the test set was 10%. Logistic Regression with an L2 regularizer was also ran on the training and test data for comparison.
 
 Type | Accuracy | Precision | Recall
 --- | --- | --- | ---
@@ -105,6 +105,8 @@ Test only Categorical | 0.711 | |
 Test only Bernoulli | 0.672 | | 
 Test only Gaussian | 0.591 | | 
 "1" | 0.6988 | 1.0 | 0.6988 
+LR Train | 0.761 | 0.939 | 0.768 
+LR Test | 0.736 | 0.939 | 0.759
 
 :exclamation::exclamation: **talk about results after feature selection**
 
