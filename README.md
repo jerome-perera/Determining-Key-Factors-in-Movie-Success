@@ -142,7 +142,7 @@ Unsupervised learning can be evaluated using standard clustering metrics such as
 
 Walter | Ankith | Simon | Jerome | Himnish
 --- | --- | --- | --- |---
-Data import and cleaning, feature engineering, Github Page, Help with Naive Bayes | Forward Feature Selection, Github Page | Categorical and One-hot-encoding, Naive Bayes implementation | Forward Feature Selection  | Categorical and One-hot-encoding, Naive Bayes implementation
+Data import and cleaning, feature engineering, Github Page, Naive Bayes with Mixed Data | Forward Feature Selection, Github Page | Categorical and One-hot-encoding, Naive Bayes implementation | Forward Feature Selection  | Categorical and One-hot-encoding, Naive Bayes implementation
 
 #### **References:**
 
