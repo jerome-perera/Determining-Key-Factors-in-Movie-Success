@@ -79,7 +79,7 @@ For supervised learning the methods utilized is planned to be ensemble learning.
 #### **Supervised Learning: NEW**:
 For supervised learning the first model we implemented was Naive Bayes (NB). By using NB has the benefit of relatively easily handling mixed input features. By combining the probabilistic output of a Bernoulli NB for one hot encoded features, Categorical NB for categorical features, and Gaussian NB for continuous features, it is possible to fit a model with these three feature types. The models are initially trained with the selected features and the likelihood from each is then combined as in the equation below.
 
-$$ P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)}{\sum_y P(x_{cat}|y)+P(x_{bern}|y)+P(x_{cont}|y)} $$
+$$ P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}{\sum_y P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)} $$
 
 These are extracted using the predict_proba() function in each sk-learn NB implementation.
 
@@ -99,8 +99,8 @@ Simply fitting naive bayes with all the features with no feature selection resul
 
 Type | Accuracy | Precision | Recall
 --- | --- | --- | ---
-Train | 0.8137 | 0.954 | 0.8121
-Test | 0.706 | 0.888 | 0.7422
+Train | 0.7695 | 0.769 | 0.885
+Test | 0.644 | 0.675 | 0.786
 Test only Categorical | 0.711 | | 
 Test only Bernoulli | 0.672 | | 
 Test only Gaussian | 0.591 | | 
