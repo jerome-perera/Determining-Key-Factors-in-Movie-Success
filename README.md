@@ -74,7 +74,11 @@ We did notice a large portion of the cast members having very few movies, so we 
 
 For supervised learning the first model we implemented, to see if learning is possible, was Naive Bayes (NB). NB has the benefit of relatively easily handling mixed input features. By combining the probabilistic output of a Bernoulli NB [^6] for one hot encoded features, Categorical NB [^7] for categorical features, and Gaussian NB [^5] for continuous features, it is possible to fit a model with these three feature types. The models are initially trained with the selected features and the likelihood from each is then combined as in the equation below.
 
-$$P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}{\sum_y P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}$$
+
+$$
+P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}{\sum_y P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}
+$$
+
 
 These are extracted using the predict_proba() function in each sk-learn NB implementation.
 
