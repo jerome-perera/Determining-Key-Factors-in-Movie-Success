@@ -110,6 +110,24 @@ LR Test | 0.736 | 0.8706 | 0.736
 
 :exclamation::exclamation: **talk about results after feature selection**
 
+Feature selection was done with forward feature selection on the individual models (Categorical, Bernoulli, and Gaussian) to identify the best parameters for each model. The comparison after feature selection is shown below.
+
+Type (Post FS) | Accuracy | Precision | Recall
+--- | --- | --- | ---
+Train | 0.7395 | 0.854 | 0.7395
+Test | 0.7138 | 0.8295 | 0.7137
+Test only Categorical | 0.704 | | 
+Test only Bernoulli | 0.707 | | 
+Test only Gaussian | 0.698 | | 
+"1" | 0.6988 | 1.0 | 0.6988 
+
+While these results do show that learning is possible with a binary classifier, it also shows that perhaps Naive Bayes is not the best model for the data as it performs worse than Logistic Regression even after feature selection.
+
+The important parameters for the types of data found by forward feature selection were:
+1. Continuous - "budget" and "runtime"
+2. Categorical - "production_country"
+3. Bernoulli - "BBC Films", "Canal+", "Castle Rock Entertainment", "Epsilon Motion Pictures", "France 2 Cinema", "Malpaso Productions", "Millenium Films", "Morgan Creek Productions", "Regency Enterprises", "Studio Babelsberg", "Action", "Arnold Schwarzenegger", "Dustin Hoffman", "Tom Cruise", "Willem Dafoe"
+
 #### **Unsupervised Learning:** :exclamation::exclamation:
 
 Unsupervised learning can be evaluated using standard clustering metrics such as silhouette coefficient or the Davies-Bouldin index. For anomaly detection evaluation will be more qualitative and focused on improved visualization and results. 
