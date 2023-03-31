@@ -70,7 +70,7 @@ We did notice a large portion of the cast members having very few movies, so we 
  
 
 
-#### **Supervised Learning: NEW**:
+#### **Supervised Learning: **:
 For supervised learning the first model we implemented was Naive Bayes (NB). By using NB has the benefit of relatively easily handling mixed input features. By combining the probabilistic output of a Bernoulli NB for one hot encoded features, Categorical NB for categorical features, and Gaussian NB for continuous features, it is possible to fit a model with these three feature types. The models are initially trained with the selected features and the likelihood from each is then combined as in the equation below.
 
 $$ P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}{\sum_y P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)} $$
@@ -83,10 +83,10 @@ Next steps would include trying further models such as ensemble learning, deep l
 
 Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance[^4] could be useful to deal with both the categorical and numerical data present. 
 
-### **Results and Discussion:** :exclamation::exclamation:
+### **Results and Discussion:**
 
 
-#### **Supervised Learning: New** :exclamation::exclamation:
+#### **Supervised Learning: **
 
 Simply fitting naive bayes with all the features with no feature selection results can be seen in the table below. The training set was 90% of the data and the test set was 10%. Logistic Regression with an L2 regularizer was also ran on the training and test data for comparison. Precision and Recall are computed using a "weighted" average to account for the unbalanced dataset.
 
@@ -121,7 +121,7 @@ The important parameters for the types of data found by forward feature selectio
 
 When implementing other models for the final project, evaluation will be done similarly for the binary case, and mean squared error will likely be used for the regression cases.
 
-#### **Unsupervised Learning:** :exclamation::exclamation:
+#### **Unsupervised Learning:**
 
 Unsupervised learning will be evaluated using standard clustering metrics such as silhouette coefficient or the Davies-Bouldin index. For anomaly detection evaluation will be more qualitative and focused on improved visualization and results. 
 
@@ -131,7 +131,7 @@ Unsupervised learning will be evaluated using standard clustering metrics such a
 
 ![Gantt Chart](Gantt Chart_Test_image.png)
 
-#### **Midterm Contribution Table:** :exclamation::exclamation:
+#### **Midterm Contribution Table:**
 
 Walter | Ankith | Simon | Jerome | Himnish
 --- | --- | --- | --- |---
