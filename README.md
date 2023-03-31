@@ -71,7 +71,8 @@ We did notice a large portion of the cast members having very few movies, so we 
 
 
 #### **Supervised Learning: **:
-For supervised learning the first model we implemented was Naive Bayes (NB). By using NB has the benefit of relatively easily handling mixed input features. By combining the probabilistic output of a Bernoulli NB for one hot encoded features, Categorical NB for categorical features, and Gaussian NB for continuous features, it is possible to fit a model with these three feature types. The models are initially trained with the selected features and the likelihood from each is then combined as in the equation below.
+
+For supervised learning the first model we implemented, to see if learning is possible, was Naive Bayes (NB). NB has the benefit of relatively easily handling mixed input features. By combining the probabilistic output of a Bernoulli NB [^6] for one hot encoded features, Categorical NB [^7] for categorical features, and Gaussian NB [^5] for continuous features, it is possible to fit a model with these three feature types. The models are initially trained with the selected features and the likelihood from each is then combined as in the equation below.
 
 $$ P(y|x) = \frac{P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)}{\sum_y P(x_{cat}|y)P(x_{bern}|y)P(x_{cont}|y)P(y)} $$
 
@@ -88,9 +89,9 @@ Unsupervised learning will be utilized to look for patterns in the movies utiliz
 
 #### **Supervised Learning: **
 
-Simply fitting naive bayes with all the features with no feature selection results can be seen in the table below. The training set was 90% of the data and the test set was 10%. Logistic Regression with an L2 regularizer was also ran on the training and test data for comparison. Precision and Recall are computed using a "weighted" average to account for the unbalanced dataset.
+Simply fitting Naive Bayes with all the features with no feature selection results can be seen in the table below. The training set was 90% of the data and the test set was 10%. Logistic Regression with an L2 regularizer was also ran on the training and test data for comparison. Precision and Recall are computed using a "weighted" average to account for the unbalanced dataset.
 
-Type | Accuracy | Precision | Recall
+Type | Accuracy [^8] | Precision [^10] | Recall [^9]
 --- | --- | --- | ---
 Train | 0.769 | 0.769 | 0.769
 Test | 0.644 | 0.644 | 0.634
@@ -98,12 +99,12 @@ Test only Categorical | 0.711 | |
 Test only Bernoulli | 0.672 | | 
 Test only Gaussian | 0.591 | | 
 "1" | 0.6988 | 1.0 | 0.6988 
-LR Train | 0.761 | 0.8519 | 0.761
-LR Test | 0.736 | 0.8706 | 0.736
+Logistic Regression Train | 0.761 | 0.8519 | 0.761
+Logistic Regression Test | 0.736 | 0.8706 | 0.736
 
 Feature selection was done with forward feature selection on the individual models (Categorical, Bernoulli, and Gaussian) to identify the best parameters for each model. The comparison after feature selection is shown below.
 
-Type (Post FS) | Accuracy | Precision | Recall
+Type (Post FS) | Accuracy [^8] | Precision [^10] | Recall [^9]
 --- | --- | --- | ---
 Train | 0.7395 | 0.854 | 0.7395
 Test | 0.7138 | 0.8295 | 0.7137
@@ -112,7 +113,7 @@ Test only Bernoulli | 0.707 | |
 Test only Gaussian | 0.698 | | 
 "1" | 0.6988 | 1.0 | 0.6988 
 
-While these results do show that learning is possible with a binary classifier, it also shows that perhaps Naive Bayes is not the best model for the data as it performs worse than Logistic Regression even after feature selection.
+While these results do show that learning is possible with a binary classifier, it also shows that perhaps Naive Bayes is not the best model for the data as it performs worse than logistic regression even after feature selection.
 
 The important parameters for the types of data found by forward feature selection were:
 1. Continuous - "budget" and "runtime"
@@ -143,6 +144,12 @@ Data import and cleaning, data visualization, feature engineering, Github Page, 
 [^2]:	R. Dhir and A. Raj, "Movie Success Prediction using Machine Learning Algorithms and their Comparison," 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC), Jalandhar, India, 2018, pp. 385-390, doi: 10.1109/ICSCCC.2018.8703320.
 [^3]:	R. Banik, 2017, “The Movies Dataset” Kaggles. [Online]. Available: https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
 [^4]:	Gower, J. C. (1971). A General Coefficient of Similarity and Some of Its Properties. Biometrics, 27(4), 857–871. https://doi.org/10.2307/2528823
+[^5]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html#sklearn.naive_bayes.GaussianNB
+[^6]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html#sklearn.naive_bayes.BernoulliNB
+[^7]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.CategoricalNB.html#sklearn.naive_bayes.CategoricalNB
+[^8]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html#sklearn.metrics.accuracy_score
+[^9]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html#sklearn.metrics.recall_score
+[^10]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html#sklearn.metrics.precision_score
 
 
  
