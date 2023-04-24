@@ -60,7 +60,7 @@ Bar charts and histograms for the genres, cast and directors, profit, are shown 
 
 ![Directors](Top_30_Directors.png)
 
-![Histogram](Director_Histogram.png)
+![Histogram](Directors_Histogram.png)
 
 ![CastHisto](Cast_Histogram.png)
 
