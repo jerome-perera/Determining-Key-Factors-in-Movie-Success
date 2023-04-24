@@ -58,13 +58,13 @@ Bar charts and histograms for the genres, cast and directors, profit, are shown 
 
 ![Month](Month_Bar.png)
 
-![Directors](Top30_Directors.png)
+![Directors](Top_30_Directors.png)
 
 ![Histogram](Director_Histogram.png)
 
 ![CastHisto](Cast_Histogram.png)
 
-![ProfitHisto](Profit_Histogram2.png)
+![ProfitHisto](Profit_Histogram.png)
 
 We did notice a large portion of the cast members having very few movies, so we culled the cast members with less than 20 movies, and similarly with production companies with less than 10 movies as they would not be useful for training or testing with very little entries. At this point we filled any NaN entries with the average value for runtime, and one hot encoded the cast, genres, and production companies. Finally, looking at the profit output, we can see that about 70% of the movies are profitable, while 30% are not profitable, which results in an unbalanced dataset if addressed with a binary classifier.
  
@@ -72,22 +72,35 @@ We did notice a large portion of the cast members having very few movies, so we 
 
 #### **Supervised Learning: **:
 
+##### **Naive Bayes:**
 For supervised learning the first model we implemented, to see if learning is possible, was Naive Bayes (NB). NB has the benefit of relatively easily handling mixed input features. By combining the probabilistic output of a Bernoulli NB [^6] for one hot encoded features, Categorical NB [^7] for categorical features, and Gaussian NB [^5] for continuous features, it is possible to fit a model with these three feature types. The models are initially trained with the selected features and the likelihood from each is then combined as in the equation below.
+
 
 
 ![Equation](equation.png)
 
 These are extracted using the predict_proba() function in each sk-learn NB implementation. Next steps would include trying further models such as ensemble learning, deep learning, Random Forest, and other methods. This could include applying regression instead of binary classification on the profit data to investigate if regression is more successful than binary classification for predicting profitability.
 
-##### **Unsupervised Learning:** 
+##### **Logistic Regression:**
 
+##### **Decision Trees:**
+
+##### **Regression Methods:**
+
+#### **Unsupervised Learning:** 
+
+###### **Gower Distance:**
 Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance[^4] could be useful to deal with both the categorical and numerical data present. 
+
+###### **Multidimensional Scaling:**
+
 
 ### **Results and Discussion:**
 
 
 #### **Supervised Learning: **
 
+##### **Naive Bayes and Logistic Regression:**
 Simply fitting Naive Bayes with all the features with no feature selection results can be seen in the table below. The training set was 90% of the data and the test set was 10%. Logistic Regression with an L2 regularizer was also ran on the training and test data for comparison. Precision and Recall are computed using a "weighted" average to account for the unbalanced dataset.
 
 Type | Accuracy [^8] | Precision [^10] | Recall [^9]
@@ -121,6 +134,19 @@ The important parameters for the types of data found by forward feature selectio
 
 When implementing other models for the final project, evaluation will be done similarly for the binary case, and mean squared error will likely be used for the regression cases.
 
+##### **Logistic Regression:**
+
+##### **Decision Trees:**
+
+##### **Regression Methods:**
+
+#### **Unsupervised Learning:** 
+
+###### **Gower Distance:**
+
+
+###### **Multidimensional Scaling:**
+
 #### **Unsupervised Learning:**
 
 Unsupervised learning will be evaluated using standard clustering metrics such as silhouette coefficient or the Davies-Bouldin index. For anomaly detection evaluation will be more qualitative and focused on improved visualization and results. 
@@ -131,11 +157,11 @@ Unsupervised learning will be evaluated using standard clustering metrics such a
 
 ![Gantt Chart](Gantt Chart_Test_image.png)
 
-#### **Midterm Contribution Table:**
+#### **Final Contribution Table:**
 
 Walter | Ankith | Simon | Jerome | Himnish
 --- | --- | --- | --- |---
-Data import and cleaning, data visualization, feature engineering, Github Page, Naive Bayes implementation with Mixed Data | Forward Feature Selection, Github Page | Categorical and One-hot-encoding, Naive Bayes implementation | Forward Feature Selection  | Categorical and One-hot-encoding, Naive Bayes implementation
+ |  || |
 
 #### **References:**
 
