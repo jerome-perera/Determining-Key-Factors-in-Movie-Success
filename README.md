@@ -67,6 +67,10 @@ Bar charts and histograms for the genres, cast and directors, profit, are shown 
 ![ProfitHisto](Profit_Histogram.png)
 
 We did notice a large portion of the cast members having very few movies, so we culled the cast members with less than 20 movies, and similarly with production companies with less than 10 movies as they would not be useful for training or testing with very little entries. At this point we filled any NaN entries with the average value for runtime, and one hot encoded the cast, genres, and production companies. Finally, looking at the profit output, we can see that about 70% of the movies are profitable, while 30% are not profitable, which results in an unbalanced dataset if addressed with a binary classifier.
+
+The correlation matrix of continuous features is shown below. The most correlated variables are Budget, Vote Counts, and Revenue. Unfortunately, revenue and vote counts come after the movie has been released so it isn't a good feature for making a profitable movie.
+
+![CorrMatrix](Correlation_Matrix.png)
  
 
 
