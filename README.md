@@ -144,7 +144,13 @@ When implementing other models for the final project, evaluation will be done si
 
 ##### **Logistic Regression:**
 
-##### **Decision Trees:**
+##### **Random Forest:**
+Our implementation of Random Forest yielded the following data:  
+
+Type | Accuracy [^8] | Precision [^10] | Recall [^9]
+--- | --- | --- | ---
+Train | 1.0 | 1.0 | 1.0
+Test | 0.72186 | 0.73959 | 0.92647
 
 ##### **Regression Methods:**
 
