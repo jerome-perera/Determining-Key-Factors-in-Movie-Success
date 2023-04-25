@@ -4,6 +4,10 @@ By: Simon Mei, Walter Disharoon, Jerome Perera, Ankith Kanderi, and Himnish Kapo
 
 Project Proposal Recording:
 [Youtube Link](https://youtu.be/j-8RxawvbOY)
+
+Final Project Recording:
+[Youtube Link](...)
+
 ### **Introduction:**  
 
 Currently, the primary goal of movies is to maximize profit for the studios and companies who create them. In order to achieve this goal, movie studios want to use machine learning to maximize box office revenue.   
@@ -16,9 +20,7 @@ Our proposed dataset is The Movies Dataset from Kaggle by Rounak Banik[^3]. This
 
 The goal of this project is to use both supervised and unsupervised learning to determine the various elements, and their corresponding importance, that contribute to a monetarily successful movie. More specifically, the findings of this project should give movie studios a better understanding of factors to consider when creating movies. This is different from the many other movie-related models out there that simply state whether a movie is expected to be successful or not, because the findings of this project are more about providing the movie industry with information for future decisions.  
 
-### **Methods:** 
-
-#### **Data Collection, Cleaning, and Visualization**
+### **Data Collection, Cleaning, and Visualization**
 The movies dataset contains metadata for over 45,000 movies. Unfortunately though the dataset is provided in multiple separate csv's in a somewhat unwieldy state. The data collection and cleaning process was as follows:
 
 1. import the csv's as pandas dataframes
@@ -71,8 +73,8 @@ We did notice a large portion of the cast members having very few movies, so we 
 The correlation matrix of continuous features is shown below. The most correlated variables are Budget, Vote Counts, and Revenue. Unfortunately, revenue and vote counts come after the movie has been released so it isn't a good feature for making a profitable movie.
 
 ![CorrMatrix](Correlation_Matrix.png)
- 
 
+### **Methods:** 
 
 #### **Supervised Learning: **:
 
@@ -85,23 +87,24 @@ For supervised learning the first model we implemented, to see if learning is po
 
 These are extracted using the predict_proba() function in each sk-learn NB implementation. Next steps would include trying further models such as ensemble learning, deep learning, Random Forest, and other methods. This could include applying regression instead of binary classification on the profit data to investigate if regression is more successful than binary classification for predicting profitability.
 
-##### **Logistic Regression:**
 
 ##### **Random Forest:**
 
-The next supervised learning method we used was Random Forest, a method typically used in classification. Random Forest is an ensemble approach that essentially uses a large number of individual decision trees to determine classification. In the case of our implementation, the Random Forest’s classification will use the features to predict a movie as either profitable or not.  
+The next supervised learning method we used was Random Forest [^11], a method typically used in classification. Random Forest is an ensemble approach that essentially uses a large number of individual decision trees to determine classification. In the case of our implementation, the Random Forest’s classification will use the features to predict a movie as either profitable or not.  
 
 To implement Random Forest, we used the overall dataset (after preprocessing), and broke it up into an X and y dataset. The X dataset consisted of all the preprocessed data, except the features titled ‘revenue’, ‘profit’, ‘title’, and ‘id’. Revenue and profit were dropped, because these are essentially our target. Title and ID were removed, because they are strings that are irrelevant to generating decision trees. The y dataset consisted of simply our target variable, ‘profit’. From here, we further broke this data down into training (80%) and test (20%) sets. Finally, we used this data to fit our Random Forest Classifier. 
 
 ##### **Regression Methods:**
 
+For regression, we used the ensemble learning method gradient boosting [^12] and multiperceptron neural networks [^13] 
+
 #### **Unsupervised Learning:** 
 
 ###### **Gower Distance:**
-Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance[^4] could be useful to deal with both the categorical and numerical data present. 
+Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering,  Gower distance[^4] was  used to deal with both the categorical and numerical data present. 
 
 ###### **Multidimensional Scaling:**
-For unsupervised learning we used metric multidimensional spacing (MDS) which models similarity based on a distance metric. Metric MDS provides a lower dimensional view of the dataset, usually with two dimensions and works by double centering the input matrix and then performing singular value decomposition. For the distance metric, we used the gower distance which measures how different data points are.
+For unsupervised learning we used metric multidimensional spacing (MDS) [^14] which models similarity based on a distance metric. Metric MDS provides a lower dimensional view of the dataset, usually with two dimensions and works by double centering the input matrix and then performing singular value decomposition. For the distance metric, we used the gower distance which measures how different data points are.
 
 
 ### **Results and Discussion:**
@@ -143,8 +146,6 @@ The important parameters for the types of data found by forward feature selectio
 
 When implementing other models for the final project, evaluation will be done similarly for the binary case, and mean squared error will likely be used for the regression cases.
 
-##### **Logistic Regression:**
-
 ##### **Random Forest:**
 Our implementation of Random Forest yielded the following data:  
 
@@ -175,6 +176,11 @@ Thus, Random Forest Classifier suggests that the most important features in pred
 10. Original Language 
 
 ##### **Regression Methods:**
+For predicting profit we found that gradient boosting was the best method. Gradient boosting reached an MSE^[15] of 16368 while Neural Networks had an MSE of 20579. The training and testing loss vs. training iterations for both models can be seen below. It is clear that the neural network model can fit the training data much better, but is more prone to overfitting. The gradient boosting model does not fit the training data as well, but generalizes much better to the testing data. Finally the important features were found using the Gini importance built into the sk-learn function as shown below.
+
+![MSE_Grad](GradientBoostingMSE.png)
+![MSE_NN](NeuralNetworkMSE.png)
+![FI_Grad](GradientBoostingFeatureImportance.png)
 
 #### **Unsupervised Learning:** 
 We found that reducing the dimensions of the data to 2 and 3 don’t seem to visually result in better separability, though it does look like the profitable movies have a lower variance.
@@ -182,15 +188,6 @@ We found that reducing the dimensions of the data to 2 and 3 don’t seem to vis
 ![UnsupervisedResults](2d_mds.png)
 ![UnsupervisedResults](3d_mds.png)
 
-
-###### **Gower Distance:**
-
-
-###### **Multidimensional Scaling:**
-
-#### **Unsupervised Learning:**
-
-Unsupervised learning will be evaluated using standard clustering metrics such as silhouette coefficient or the Davies-Bouldin index. For anomaly detection evaluation will be more qualitative and focused on improved visualization and results. 
 
 ### **Timeline:**
 
@@ -202,7 +199,11 @@ Unsupervised learning will be evaluated using standard clustering metrics such a
 
 Walter | Ankith | Simon | Jerome | Himnish
 --- | --- | --- | --- |---
- |  || |
+ Naïve Bayes, Data Visualizations and Cleaning, Regression Visualizations, General Model Support, Presentation, Video, GitHub Page
+| Decision Tree Classifier and Visualizations, Presentation, Video, GitHub Page
+  | Unsupervised Learning, Presentation, Video, GitHub Page | Regression Code,
+Presentation
+ |
 
 #### **References:**
 
@@ -216,7 +217,11 @@ Walter | Ankith | Simon | Jerome | Himnish
 [^8]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html#sklearn.metrics.accuracy_score
 [^9]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html#sklearn.metrics.recall_score
 [^10]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html#sklearn.metrics.precision_score
-
+[^11]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+[^12]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor
+[^13]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html
+[^14]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.manifold.MDS.html#sklearn.manifold.MDS
+[^15]: scikit-learn. https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html
 
  
 
