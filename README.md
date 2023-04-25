@@ -178,6 +178,8 @@ Thus, Random Forest Classifier suggests that the most important features in pred
 ##### **Regression Methods:**
 For predicting profit we found that gradient boosting was the best method. Gradient boosting reached an MSE[^15] of 16368 while Neural Networks had an MSE of 20579. The training and testing loss vs. training iterations for both models can be seen below. The gradient boosting is shown first, followed by the neural network. It is clear that the neural network model can fit the training data much better, but is more prone to overfitting as seen by the second plot. The gradient boosting model does not fit the training data as well, but generalizes much better to the testing data. Finally the important features were found using the Gini importance built into the sk-learn function as shown below.
 
+The overfitting of the training model suggests that the no of features are too many and the model is complex for the data. The large mse values suggest that the features taken into consideration for predicting are not ideal and would suggest to search for other relevant ones.
+
 ![MSE_Grad](GradientBoostingMSE.png)
 
 ![MSE_NN](NeuralNetworkMSE.png)
