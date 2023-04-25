@@ -6,7 +6,7 @@ Project Proposal Recording:
 [Youtube Link](https://youtu.be/j-8RxawvbOY)
 
 Final Project Recording:
-[Youtube Link](...)
+[Youtube Link](https://youtu.be/ap8NlHKaNpw)
 
 ### **Introduction:**  
 
