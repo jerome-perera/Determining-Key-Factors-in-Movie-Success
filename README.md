@@ -160,6 +160,19 @@ These features are shown here:
 
 ![RandomForestResults](randomforestresults.png)
 
+Thus, Random Forest Classifier suggests that the most important features in predicting a movie’s profitability are as ranked below: 
+
+1. Budget 
+2. Cast Size 
+3. Crew Size 
+4. Director  
+5. Runtime 
+6. Release Month 
+7. Production Countries 
+8. Spoken Languages 
+9. Drama 
+10. Original Language 
+
 ##### **Regression Methods:**
 
 #### **Unsupervised Learning:** 
