@@ -101,6 +101,7 @@ To implement Random Forest, we used the overall dataset (after preprocessing), a
 Unsupervised learning will be utilized to look for patterns in the movies utilizing clustering, or to deal with outlier movies with anomaly detection methods.  Gower distance[^4] could be useful to deal with both the categorical and numerical data present. 
 
 ###### **Multidimensional Scaling:**
+For unsupervised learning we used metric multidimensional spacing (MDS) which models similarity based on a distance metric. Metric MDS provides a lower dimensional view of the dataset, usually with two dimensions and works by double centering the input matrix and then performing singular value decomposition. For the distance metric, we used the gower distance which measures how different data points are.
 
 
 ### **Results and Discussion:**
@@ -176,6 +177,11 @@ Thus, Random Forest Classifier suggests that the most important features in pred
 ##### **Regression Methods:**
 
 #### **Unsupervised Learning:** 
+We found that reducing the dimensions of the data to 2 and 3 don’t seem to visually result in better separability, though it does look like the profitable movies have a lower variance.
+
+![UnsupervisedResults](2d_mds.png)
+![UnsupervisedResults](3d_mds.png)
+
 
 ###### **Gower Distance:**
 
