@@ -96,7 +96,7 @@ To implement Random Forest, we used the overall dataset (after preprocessing), a
 
 ##### **Regression Methods:**
 
-For regression, we used the ensemble learning method gradient boosting [^12] and multiperceptron neural networks [^13] 
+For regression, we used the ensemble learning method gradient boosting [^12] and multiperceptron neural networks [^13]. We expect regression to perform poorly due to the lack of correlation between usable features and profit. 
 
 #### **Unsupervised Learning:** 
 
