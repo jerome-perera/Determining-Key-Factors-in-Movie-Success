@@ -204,7 +204,7 @@ Predicting profitability of a movie without using revenue or ratings is a diffic
 
 #### **Final Contribution Table:**
 
-Walter | Ankith | Simon | Jerome | Himnish
+Walter | Ankith | Simon | Himnish | Jerome
 --- | --- | --- | --- |---
  Naïve Bayes, Data Visualizations and Cleaning, Regression Visualizations, General Model Support, Presentation, Video, GitHub Page | Decision Tree Classifier and Visualizations, Presentation, Video, GitHub Page | Unsupervised Learning, Presentation, Video, GitHub Page | Regression Code, Presentation |
 
