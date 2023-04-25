@@ -152,6 +152,14 @@ Type | Accuracy [^8] | Precision [^10] | Recall [^9]
 Train | 1.0 | 1.0 | 1.0
 Test | 0.72186 | 0.73959 | 0.92647
 
+As we can see, the forest is clearly overfitting, however, the overfit forest still performs better than some of the other forms of learning that we explored.  
+
+From here, to find the features that contribute most to this forest classification of a movie as profitable, we can examine the features that contribute most to this Random Forest Classifier: 
+
+These features are shown here: 
+
+![RandomForestResults](randomforestresults.png)
+
 ##### **Regression Methods:**
 
 #### **Unsupervised Learning:** 
