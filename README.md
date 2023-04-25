@@ -91,7 +91,7 @@ These are extracted using the predict_proba() function in each sk-learn NB imple
 
 The next supervised learning method we used was Random Forest, a method typically used in classification. Random Forest is an ensemble approach that essentially uses a large number of individual decision trees to determine classification. In the case of our implementation, the Random Forest’s classification will use the features to predict a movie as either profitable or not.  
 
-To implement Random Forest, overall dataset (after preprocessing), and broke it up into an X and y dataset. The X dataset consisted of all the preprocessed data, except the features titled ‘revenue’, ‘profit’, ‘title’, and ‘id’. Revenue and profit were dropped, because these are essentially our target. Title and ID were removed, because they are strings that are irrelevant to generating decision trees. The y dataset consisted of simply our target variable, ‘profit’. From here, we further broke this data down into training (80%) and test (20%) sets. Finally, we used this data to fit our Random Forest Classifier. 
+To implement Random Forest, we used the overall dataset (after preprocessing), and broke it up into an X and y dataset. The X dataset consisted of all the preprocessed data, except the features titled ‘revenue’, ‘profit’, ‘title’, and ‘id’. Revenue and profit were dropped, because these are essentially our target. Title and ID were removed, because they are strings that are irrelevant to generating decision trees. The y dataset consisted of simply our target variable, ‘profit’. From here, we further broke this data down into training (80%) and test (20%) sets. Finally, we used this data to fit our Random Forest Classifier. 
 
 ##### **Regression Methods:**
 
